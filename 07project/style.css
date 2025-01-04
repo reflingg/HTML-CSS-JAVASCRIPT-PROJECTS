@@ -1,0 +1,126 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(
+    135deg,
+    #6a11cb,
+    #2575fc
+  ); /* Gradient Background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #f4f4f4;
+  overflow: hidden; /* Prevent scrolling */
+}
+
+.container {
+  background: #ffffff; /* White Background for Card */
+  padding: 30px 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle Shadow */
+  width: 350px;
+  text-align: center; /* Center Align Text */
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.todo-input {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px; /* Space between Input and Button */
+  margin-bottom: 20px;
+}
+
+#todoInput {
+  flex: 1;
+  padding: 10px;
+  border: 2px solid #2575fc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 1rem;
+  color: #333;
+  background-color: #f8f9fa; /* Light Background for Input */
+}
+
+#todoInput::placeholder {
+  color: #aaa;
+}
+
+#addTaskButton {
+  padding: 10px 15px;
+  background: #6a11cb;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#addTaskButton:hover {
+  background: #2575fc;
+}
+
+#todoList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#todoList li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  border-radius: 8px;
+  background: #f8f9fa;
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 1rem;
+  transition: transform 0.2s ease;
+}
+
+#todoList li:hover {
+  transform: scale(1.02); /* Slight Zoom on Hover */
+}
+
+#todoList li.completed {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.delete-button {
+  background: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+  background: #c82333;
+}
+
+/* Scrollbar Styles (for better aesthetics) */
+#todoList::-webkit-scrollbar {
+  width: 6px;
+}
+
+#todoList::-webkit-scrollbar-thumb {
+  background-color: #6a11cb;
+  border-radius: 10px;
+}
+
+#todoList::-webkit-scrollbar-track {
+  background: #f8f9fa;
+}
